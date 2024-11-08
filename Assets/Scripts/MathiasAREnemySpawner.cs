@@ -7,9 +7,9 @@ public class ARObjectSpawner : MonoBehaviour
     private Camera _camera; 
     private ARRaycastManager m_RaycastManager;
     [SerializeField] private GameObject _objectPrefab; 
-    [SerializeField] private float spawnRadius = 5f; 
+    [SerializeField] private float spawnRadius = 10f; 
     [SerializeField] private float speed = 2f; 
-    [SerializeField] private float spawnInterval = 2f; 
+    [SerializeField] private float spawnInterval = 4f; 
 
     private void Awake()
     {
@@ -53,10 +53,18 @@ public class ARObjectSpawner : MonoBehaviour
         {
             
             obj.transform.position = Vector3.MoveTowards(obj.transform.position, _camera.transform.position, speed * Time.deltaTime);
+            obj.transform.LookAt(_camera.transform.position);
+
             yield return null;
+
         }
 
         
         Destroy(obj);
+    }
+
+    private void Update()
+    {
+        transform.LookAt(_camera.transform.position);
     }
 }
