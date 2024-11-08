@@ -35,7 +35,7 @@ public class MathiasARShoot : MonoBehaviour
                 GameObject particlesInstance = Instantiate(particles, hit.point, Quaternion.identity);
 
                 
-                Destroy(particlesInstance, 1f);
+                Destroy(particlesInstance, 4f);
             }
         }
     }
