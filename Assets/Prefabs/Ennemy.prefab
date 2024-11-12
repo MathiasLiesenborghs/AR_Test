@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2961147744310561249}
   - component: {fileID: 4189847185444855245}
   - component: {fileID: 6680651218143164424}
+  - component: {fileID: 7259880627676966574}
   m_Layer: 3
   m_Name: Ennemy
   m_TagString: Ennemy
@@ -128,3 +129,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7259880627676966574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7279686010425849761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 557cc23cb30dd8e49baff956fe650f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

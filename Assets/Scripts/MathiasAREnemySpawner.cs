@@ -49,18 +49,21 @@ public class ARObjectSpawner : MonoBehaviour
 
     private IEnumerator MoveObjectTowardsCamera(GameObject obj)
     {
-        while (Vector3.Distance(obj.transform.position, _camera.transform.position) > 0.5f)
+        while (obj != null)
         {
-            
             obj.transform.position = Vector3.MoveTowards(obj.transform.position, _camera.transform.position, speed * Time.deltaTime);
             obj.transform.LookAt(_camera.transform.position);
 
+            if (Vector3.Distance(obj.transform.position, _camera.transform.position) < 0.5f)
+            {
+
+                Destroy(obj);
+            }
+            
             yield return null;
-
         }
-
         
-        Destroy(obj);
+        
     }
 
     private void Update()

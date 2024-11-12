@@ -9,7 +9,7 @@ public class MathiasProjectileDestroyer : MonoBehaviour
         if (collision.gameObject.CompareTag("Ennemy"))
         {
             Destroy(collision.gameObject);
-            Destroy(gameObject);
+            collision.gameObject.GetComponent<Enemy>().HandleDestroy();
         }
     }
 }

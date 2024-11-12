@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,9 +21,11 @@ public class MathiasSound : MonoBehaviour
 
     void OnDestroy()
     {
-        if (SoundDestroy != null)
-        {
-            AudioSource.DestroyImmediate(SoundDestroy);
-        }
+
+    }
+
+    internal void PlayDestroySound()
+    {
+        AudioSource?.PlayOneShot(SoundDestroy);
     }
 }
