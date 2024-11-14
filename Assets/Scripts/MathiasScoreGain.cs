@@ -9,15 +9,14 @@ public class MathiasScoreGain : MonoBehaviour
     private MathiasScore scoreManager;
 
     void Start()
-    {
-        
+    {        
         scoreManager = FindObjectOfType<MathiasScore>();
     }
 
     void OnCollisionEnter(Collision collision)
     {
         
-        if (collision.gameObject.CompareTag("Projectile"))
+        if (collision.gameObject.CompareTag("Ennemy"))
         {
             Destroy(gameObject);
             scoreManager.AddScore(points);
